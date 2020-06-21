@@ -15,6 +15,8 @@ if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'))
 }
 
+app.engine('.hbs', exphbs({extname: '.hbs'}))
+
 const PORT = process.env.PORT || 3000
 
 app.listen(
