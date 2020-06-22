@@ -3,6 +3,7 @@ const express = require('express')
 const dotenv = require('dotenv')
 const morgan = require('morgan')
 const exphbs = require('express-handlebars')
+const passport = require('passport')
 const connectDB = require('./config/db')
 
 // Load config
