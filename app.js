@@ -9,6 +9,10 @@ const connectDB = require('./config/db')
 // Load config
 dotenv.config({ path: './config/config.env' })
 
+// Passport config
+
+require('./config/passport')(passport)
+
 connectDB()
 
 const app = express()
@@ -16,6 +20,8 @@ const app = express()
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'))
 }
+
+// Handlebars
 
 app.engine('.hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }))
 app.set('view engine', '.hbs')
