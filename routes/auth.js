@@ -6,7 +6,7 @@ const passport = require('passport')
 // @route GET /auth/google
 router.get('/google', passport.authenticate('google', { scope: ['profile'] }))
 
-//@desc Google auth callback
+// @desc Google auth callback
 // @route GET /auth/google/callback
 router.get(
   '/google/callback',
@@ -15,5 +15,8 @@ router.get(
     res.redirect('/dashboard')
   }
 )
+
+// @desc Logout user
+// @route /auth/logout
 
 module.exports = router
