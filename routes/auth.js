@@ -19,7 +19,7 @@ router.get(
 // @desc Logout user
 // @route /auth/logout
 router.get('/logout', (req, res) => {
-  
+  req.logout()
 })
 
 module.exports = router
