@@ -7,6 +7,10 @@ module.exports = {
     }
   },
   ensureGuest: function (res, req, next) {
-    
-  }
+    if (req.isAuthenticated()) {
+      res.redirect('/dashboard')
+    } else {
+      return next()
+    }
+  },
 }
