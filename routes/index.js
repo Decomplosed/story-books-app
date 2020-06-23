@@ -13,6 +13,9 @@ router.get('/', ensureGuest, (req, res) => {
 
 //@desc Dashboard
 router.get('/dashboard', ensureAuth, (req, res) => {
+  try {
+  } catch (err) {}
+
   res.render('dashboard', {
     name: req.user.firstName,
   })
