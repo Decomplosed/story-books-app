@@ -12,7 +12,7 @@ router.get('/', ensureGuest, (req, res) => {
 })
 
 //@desc Dashboard
-router.get('/dashboard', ensureAuth, (req, res) => {
+router.get('/dashboard', ensureAuth, async (req, res) => {
   try {
   } catch (err) {}
 
