@@ -12,6 +12,8 @@ router.get('/add', ensureAuth, (req, res) => {
 
 // @desc  Proess the add form
 // @route POST /stories
-router.post('/', ensureAuth, (req, res) => {})
+router.post('/', ensureAuth, (req, res) => {
+  try {} catch(err) {}
+})
 
 module.exports = router
