@@ -14,6 +14,7 @@ router.get('/add', ensureAuth, (req, res) => {
 // @route POST /stories
 router.post('/', ensureAuth, (req, res) => {
   try {
+    req.body.user = req.user.id
   } catch (err) {
     console.error(err)
     res.render('error/500')
