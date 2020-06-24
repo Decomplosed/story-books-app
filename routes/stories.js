@@ -12,7 +12,7 @@ router.get('/add', ensureAuth, (req, res) => {
 
 // @desc  Proess the add form
 // @route POST /stories
-router.post('/', ensureAuth, (req, res) => {
+router.post('/', ensureAuth, async (req, res) => {
   try {
     req.body.user = req.user.id
   } catch (err) {
