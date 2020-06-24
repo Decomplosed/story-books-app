@@ -13,7 +13,11 @@ router.get('/add', ensureAuth, (req, res) => {
 // @desc  Proess the add form
 // @route POST /stories
 router.post('/', ensureAuth, (req, res) => {
-  try {} catch(err) {}
+  try {
+  } catch (err) {
+    console.error(err)
+    res.render('error/500')
+  }
 })
 
 module.exports = router
