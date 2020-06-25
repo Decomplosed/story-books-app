@@ -37,6 +37,8 @@ app.engine(
   exphbs({
     helpers: {
       formatDate,
+      stripTags,
+      truncate,
     },
     defaultLayout: 'main',
     extname: '.hbs',
