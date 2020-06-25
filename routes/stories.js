@@ -27,6 +27,10 @@ router.post('/', ensureAuth, async (req, res) => {
 // @route GET /stories
 router.get('/stories', ensureAuth, async (req, res) => {
   try {
+    const stories = await Story.find({ status: 'public' })
+      .populate('user')
+      .sort({ createdAt: 'desc' })
+      .lean()
   } catch (err) {
     console.error(err)
     res.render('/error/500')
