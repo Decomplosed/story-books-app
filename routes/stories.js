@@ -25,6 +25,12 @@ router.post('/', ensureAuth, async (req, res) => {
 
 // @desc  Show all stories
 // @route GET /stories
-router.get('/stories', ensureAuth, async (req, res) => {})
+router.get('/stories', ensureAuth, async (req, res) => {
+  try {
+  } catch (err) {
+    console.error(err)
+    res.render('/error/500')
+  }
+})
 
 module.exports = router
