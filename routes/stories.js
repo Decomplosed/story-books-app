@@ -23,4 +23,8 @@ router.post('/', ensureAuth, async (req, res) => {
   }
 })
 
+// @desc  Show all stories
+// @route GET /stories
+router.get('/stories', ensureAuth, async (req, res) => {})
+
 module.exports = router
