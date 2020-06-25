@@ -39,6 +39,7 @@ app.engine(
       formatDate,
       stripTags,
       truncate,
+      editIcon,
     },
     defaultLayout: 'main',
     extname: '.hbs',
