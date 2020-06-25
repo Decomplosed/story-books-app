@@ -64,6 +64,11 @@ app.use(passport.session())
 // Static folder
 app.use(express.static(path.join(__dirname, 'public')))
 
+// Set globar var
+app.use(function (req, res, next) {
+  res.locals.user = req.user
+})
+
 // Routes
 app.use('/', require('./routes/index'))
 app.use('/auth', require('./routes/auth'))
