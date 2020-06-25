@@ -12,5 +12,6 @@ module.exports = {
       new_str = new_str.length > 0 ? new_str : str.substr(0, len)
       return new_str + '...'
     }
+    return str
   },
 }
