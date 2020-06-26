@@ -46,6 +46,7 @@ app.engine(
       stripTags,
       truncate,
       editIcon,
+      select,
     },
     defaultLayout: 'main',
     extname: '.hbs',
