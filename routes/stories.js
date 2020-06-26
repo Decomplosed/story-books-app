@@ -75,6 +75,8 @@ router.put('/:id', ensureAuth, async (req, res) => {
       new: true,
       runValidators: true,
     })
+
+    res.redirect('/dashboard')
   }
 })
 
