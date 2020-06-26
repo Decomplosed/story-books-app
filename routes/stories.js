@@ -61,6 +61,8 @@ router.get('/edit/:id', ensureAuth, async (req, res) => {
 
 // @desc  Update story
 // @route PUT /stories/:id
-router.put('/:id', ensureAuth, async (req, res) => {})
+router.put('/:id', ensureAuth, async (req, res) => {
+  let story = await Story.findById(req.params.id).lean()
+})
 
 module.exports = router
