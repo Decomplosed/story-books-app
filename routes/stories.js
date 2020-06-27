@@ -121,4 +121,8 @@ router.delete('/:id', ensureAuth, async (req, res) => {
   }
 })
 
+// @desc  User stories
+// @route GET /stories/user/:userId
+router.get('/user/:userId', ensureAuth, (req, res) => {})
+
 module.exports = router
