@@ -79,7 +79,10 @@ router.put('/:id', ensureAuth, async (req, res) => {
 
       res.redirect('/dashboard')
     }
-  } catch (err) {}
+  } catch (err) {
+    console.error(err)
+    return res.render('error/500')
+  }
 })
 
 // @desc  Delete story
