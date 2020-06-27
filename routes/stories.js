@@ -123,6 +123,6 @@ router.delete('/:id', ensureAuth, async (req, res) => {
 
 // @desc  User stories
 // @route GET /stories/user/:userId
-router.get('/user/:userId', ensureAuth, (req, res) => {})
+router.get('/user/:userId', ensureAuth, async (req, res) => {})
 
 module.exports = router
