@@ -56,6 +56,7 @@ router.get('/:id', ensureAuth, async (req, res) => {
     })
   } catch (err) {
     console.error(err)
+    res.render('error/404')
   }
 })
 
