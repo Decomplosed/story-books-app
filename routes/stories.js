@@ -41,6 +41,10 @@ router.get('/', ensureAuth, async (req, res) => {
   }
 })
 
+// @desc  Show single story
+// @route GET /stories/:id
+router.get('/:id', ensureAuth, (req, res) => {})
+
 // @desc  Show edit page
 // @route GET /stories/edit/:id
 router.get('/edit/:id', ensureAuth, async (req, res) => {
