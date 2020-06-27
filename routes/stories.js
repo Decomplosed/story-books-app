@@ -58,7 +58,10 @@ router.get('/edit/:id', ensureAuth, async (req, res) => {
     } else {
       res.render('stories/edit', { story })
     }
-  } catch (err) {}
+  } catch (err) {
+    console.error(err)
+    return res.render('error/500')
+  }
 })
 
 // @desc  Update story
