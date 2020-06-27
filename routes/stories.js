@@ -125,6 +125,10 @@ router.delete('/:id', ensureAuth, async (req, res) => {
 // @route GET /stories/user/:userId
 router.get('/user/:userId', ensureAuth, async (req, res) => {
   try {
+    const stories = await Story.find({
+      user: req.params.userId,
+      status: 'public',
+    })
   } catch (err) {}
 })
 
