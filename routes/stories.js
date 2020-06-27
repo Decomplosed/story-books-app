@@ -54,7 +54,9 @@ router.get('/:id', ensureAuth, async (req, res) => {
     res.render('stories/show', {
       story,
     })
-  } catch (err) {}
+  } catch (err) {
+    console.error(err)
+  }
 })
 
 // @desc  Show edit page
