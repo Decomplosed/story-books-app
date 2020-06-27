@@ -88,6 +88,7 @@ router.delete('/:id', ensureAuth, async (req, res) => {
     res.redirect('/dashboard')
   } catch (err) {
     console.error(err)
+    return res.render('error/500')
   }
 })
 
