@@ -129,6 +129,8 @@ router.get('/user/:userId', ensureAuth, async (req, res) => {
       user: req.params.userId,
       status: 'public',
     })
+      .populate('user')
+      .lean()
   } catch (err) {}
 })
 
