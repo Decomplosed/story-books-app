@@ -131,6 +131,10 @@ router.get('/user/:userId', ensureAuth, async (req, res) => {
     })
       .populate('user')
       .lean()
+
+    res.render('stories/index', {
+      stories,
+    })
   } catch (err) {}
 })
 
