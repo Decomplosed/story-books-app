@@ -135,7 +135,9 @@ router.get('/user/:userId', ensureAuth, async (req, res) => {
     res.render('stories/index', {
       stories,
     })
-  } catch (err) {}
+  } catch (err) {
+    console.error(err)
+  }
 })
 
 module.exports = router
